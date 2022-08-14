@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DataMiner  {
-    private WebDriver driver;
+    private String a;
 
     public String plyersScaner(){
         return getServers();
@@ -20,7 +20,7 @@ public class DataMiner  {
          System.setProperty("webdriver.chrome.driver","G:\\Kurs_Java\\WebDriver\\bin\\chromedriver.exe");
          ChromeOptions options = new ChromeOptions();
          options.addArguments("--headless");
-         driver = new ChromeDriver(options);
+         WebDriver driver = new ChromeDriver(options);
          driver.get("https://battlelog.battlefield.com/bf4/servers/show/pc/7db19d20-f4c6-494a-afd3-3ce98233168e/NRU-Gentleman-s-T-Bag-Club-Max-KD-2-0-Active-Admins-60Hz/");
          String text = String.valueOf(driver.findElement(By.xpath("//*[@id=\"server-page-info\"]/div[2]/div[1]/section/h5")).getText());
          String serverName = String.valueOf(driver.findElement(By.xpath("//*[@id=\"server-page\"]/header/div[2]/h1")).getText());
