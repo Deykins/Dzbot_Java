@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class DataMiner  {
-
+    private String a;
 
     public String plyersScaner(){
         return getServers();
