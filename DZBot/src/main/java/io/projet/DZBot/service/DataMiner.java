@@ -17,7 +17,6 @@ public class DataMiner  {
     }
      
      public String getServers(){
-         System.setProperty("webdriver.chrome.driver","G:\\Kurs_Java\\WebDriver\\bin\\chromedriver.exe");
          ChromeOptions options = new ChromeOptions();
          options.addArguments("--headless");
          WebDriver driver = new ChromeDriver(options);
